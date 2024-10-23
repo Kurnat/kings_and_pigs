@@ -1,8 +1,13 @@
-window.addEventListener('keydown', ({ key }) => {
-  if (player.preventInput) return
-  switch (key.toLowerCase()) {
-    case 'w':
+window.addEventListener('keydown', ({ code }) => {
 
+  console.log(code);
+
+  if (player.preventInput) return
+
+  switch (code) {
+    case 'Space': keys.space.presed = true
+      break;
+    case 'KeyW':
       for (let i = 0; i < doors.length; i++) {
         const door = doors[i]
 
@@ -22,22 +27,23 @@ window.addEventListener('keydown', ({ key }) => {
       }
       if (player.velocity.y === 0) player.velocity.y = -25
       break;
-    case 'a': keys.a.presed = true
+    case 'KeyA': keys.a.presed = true
       break;
-    case 'd': keys.d.presed = true
+    case 'KeyD': keys.d.presed = true
       break;
   }
 })
 
-window.addEventListener('keyup', ({ key }) => {
-
-  switch (key.toLowerCase()) {
-    case 'w':
+window.addEventListener('keyup', ({ code }) => {
+  switch (code) {
+    case 'Space': keys.space.presed = false
+      break;
+    case 'KeyW':
       if (player.velocity.y === 0) player.velocity.y = 25
       break;
-    case 'a': keys.a.presed = false
+    case 'KeyA': keys.a.presed = false
       break;
-    case 'd': keys.d.presed = false
+    case 'KeyD': keys.d.presed = false
       break;
   }
 })

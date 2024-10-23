@@ -1,5 +1,6 @@
 body {
-  background-color: #3f3851;
+  /* background-color: #3f3851; */
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;

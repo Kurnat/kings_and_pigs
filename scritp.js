@@ -37,6 +37,18 @@ const player = new Player({
       loop: true,
       imageSrc: './img/king/runLeft.png'
     },
+    attackRight: {
+      frameRate: 3,
+      frameBuffer: 3,
+      loop: false,
+      imageSrc: './img/king/attack.png'
+    },
+    attackLeft: {
+      frameRate: 3,
+      frameBuffer: 3,
+      loop: false,
+      imageSrc: './img/king/attackLeft.png'
+    },
     enterDoor: {
       frameRate: 8,
       frameBuffer: 3,
@@ -166,7 +178,8 @@ let levels = {
 const keys = {
   w: { presed: false },
   a: { presed: false },
-  d: { presed: false }
+  d: { presed: false },
+  space: { presed: false }
 }
 
 const overlay = {
